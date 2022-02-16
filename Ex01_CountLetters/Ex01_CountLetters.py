@@ -4,7 +4,7 @@ Ex01: Perform various analysis tasks on a list of words
 from collections import Counter
 
 fname = "Wordle_MysteryWords.csv"
-
+#fname = "my.txt"
 def readfile(fname):
     '''Reads a file and return the contents as a string'''
     file= open(fname,'r')
@@ -116,16 +116,17 @@ def show_counts(d, title):
         
 def main():
     wordstr = readfile(fname)
-    #print(wordstr[:30])  #Print 1st 30 chars
+    print(wordstr[:30])  #Print 1st 30 chars
     wordlist = wordstr.split()  #Convert str into list of words
-    #print(wordlist[:20])  #Print 1st 20 words
-    #print(wordlist[-20:])
-    #show_counts(count_letters(wordlist), "Number of times each letter occurs")
-    #show_counts(count_words(wordlist), "Number of words each letter occurs in")
-    #show_counts(count_mult(wordlist), "Counts of letters in multiple words")
-    #show_counts(count_pos(wordlist),
-     #           "Number of times each letter occurs in each position")
+    print(wordlist[:20])  #Print 1st 20 words
+    print(wordlist[-20:])
+    show_counts(count_letters(wordlist), "Number of times each letter occurs")
+    show_counts(count_words(wordlist), "Number of words each letter occurs in")
+    show_counts(count_mult(wordlist), "Counts of letters in multiple words")
+    show_counts(count_pos(wordlist),
+                "Number of times each letter occurs in each position")
     count= count_letters2(wordlist);
+    print("Number of times each letter occurs")
     for c in count.most_common():
         print(c[0],c[1])
     #show_counts(count_letters2(wordlist), "Number of times each letter occurs")
