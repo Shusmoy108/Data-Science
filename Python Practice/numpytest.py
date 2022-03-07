@@ -114,7 +114,7 @@ print("b",b)
 print("c",c)
 print("d",d)
 print("a",a)
-
+print(a*b)
 a=np.arange(0,10)
 print(a)
 b=a[3:6]
@@ -128,8 +128,9 @@ print(a[[1,2]])
 row=np.array([1,2])
 col=np.array([2,3])
 print(a[row,col])
-depth_split=np.dsplit(a,3)
-print(depth_split)
+#depth_split=np.dsplit(a,3)
+#print(depth_split)
+
 
 
                 
