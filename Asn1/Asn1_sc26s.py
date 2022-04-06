@@ -47,9 +47,9 @@ def meanValue(data):
 
 def main():
     wordstr = makesonnets(readlines(filename))
-    print(f"Mean : {round(statistics.mean(wordstr.values()),2)}")
-    print(f"Median : {round(statistics.median(wordstr.values()),2)}")
-    print(f"Standard Deviation : {round(statistics.stdev(wordstr.values()),2)}")
+    print(f"Mean : {round(statistics.mean(wordstr.values()),1)}")
+    print(f"Median : {statistics.median(wordstr.values())}")
+    print(f"Standard Deviation : {round(statistics.stdev(wordstr.values()),1)}")
     
 main()
 
