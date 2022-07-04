@@ -4,6 +4,7 @@ import random
 from matplotlib import pyplot as plt
 
 def plotgraph(max_sum,prob, dice_num, trials):
+  
     plt.title(f"Probability with {dice_num} dice over {trials} trials")
     plt.xlabel("Roll")
     plt.ylabel("Probability")
@@ -23,8 +24,10 @@ def dice_game(dice_num,trials):
     prob = np.zeros(max_sum)
     for i in range(0,max_sum):
         prob[i]=num_dice[i]/trials
-        end = time.time()
-    print(f"Your program elapsed time {end - start}s")
+        if(i>=dice_num):
+            print(f"{i} : {round(prob[i],3)}")
+    end = time.time()   
+    print(f"Elapsed time {end - start} second(s)")
     plotgraph(max_sum,prob,dice_num,trials)
     
 def main():
@@ -49,6 +52,6 @@ def main():
         #print(prob)
         #end = time.time()
         #print(f"Your program elapsed time {end - start}s")
-        
+    print("Goodbye")
 
 main()
